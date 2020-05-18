@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import Checkbox from './Checkbox';
+import { connect } from 'react-redux';
+import { updateFilters } from './store/actions';
 
 const availableSizes = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
 class Filter extends Component {
   componentDidMount() {
-    this.selectedCheckboxes = new Set();
+    this.selectedCheckboxes = new Set(); // Be careful, this is NOT this.state.selectedCheckboxes
   }
 
   toggleCheckbox = (label) => {
@@ -36,4 +38,4 @@ class Filter extends Component {
   }
 }
 
-export default Filter;
+export default connect(null, { updateFilters })(Filter);

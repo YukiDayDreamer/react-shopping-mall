@@ -6,7 +6,7 @@ const ShelfHeader = (props) => {
   return (
     <div className="shelf-container-header">
       <span>{props.productsLength} Product(s) found.</span>
-      <Sort updateSort={props.updateSort} />
+      <Sort />
     </div>
   );
 };
