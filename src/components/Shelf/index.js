@@ -27,14 +27,16 @@ class Shelf extends Component {
   }
 
   render() {
+    const { products } = this.props;
+
     return (
       <Row style={{ width: '100%' }}>
         <Col span={4}>
           <Filter />
         </Col>
         <Col span={20}>
-          <ShelfHeader productsLength={this.props.products.length} />
-          <ProductList products={this.props.products} />
+          <ShelfHeader productsLength={products.length} />
+          <ProductList products={products} />
         </Col>
       </Row>
     );

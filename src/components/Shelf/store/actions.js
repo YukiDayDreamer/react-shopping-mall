@@ -35,20 +35,19 @@ export const fetchProducts = () => (dispatch) => {
   const filters = store.getState().filters.sizes;
   const sort = store.getState().sort.order;
 
-  console.log(store.state);
-
   const fetchAPI = constructAPI(filters, sort);
 
   axios
     .get(fetchAPI)
     .then((res) => {
       let products = res.data;
+
       dispatch({
         type: FETCH_PRODUCTS,
         payload: products,
       });
     })
-    .catch((e) => {
-      console.error(e);
+    .catch((err) => {
+      console.error('Could not fetch products. Try again later.', err);
     });
 };

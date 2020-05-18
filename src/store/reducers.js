@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import ShelfReducer from '../components/Shelf/store/reducer';
-import { reducer as FilterReducer } from '../components/Shelf/Filter/store';
-import { reducer as SortReducer } from '../components/Shelf/Sort/store';
+import { reducer as shelfReducer } from '../components/Shelf/store';
+import { reducer as cartReducer } from '../components/Cart/store';
+import { reducer as filtersReducer } from '../components/Shelf/Filter/store';
+import { reducer as sortReducer } from '../components/Shelf/Sort/store';
 
 export default combineReducers({
-  shelf: ShelfReducer,
-  filters: FilterReducer,
-  sort: SortReducer,
+  shelf: shelfReducer,
+  cart: cartReducer,
+  filters: filtersReducer,
+  sort: sortReducer,
 });
