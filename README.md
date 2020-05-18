@@ -1,4 +1,6 @@
-Extract key features from [React-Shopping-Cart](https://github.com/jeffersonRibeiro/react-shopping-cart) by Jefferson Ribeiro.
+# React Shopping Mall
+
+A project which extracts key features from [React-Shopping-Cart](https://github.com/jeffersonRibeiro/react-shopping-cart) by Jefferson Ribeiro.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
